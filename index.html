@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101011">
+  <meta name="description" content="PI CHROMA by PIGOAT Software Studio — portrait imaging and digital makeup. Currently in development.">
+  <title>PI CHROMA — PIGOAT Software Studio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101011;
+      --panel: #171719;
+      --text: #f2eee9;
+      --muted: #a7a09a;
+      --soft: #77716c;
+      --gold: #d6b38b;
+      --rose: #b98b83;
+      --line: rgba(225, 205, 183, .17);
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 50% 34%, rgba(185,139,131,.10), transparent 34rem),
+        radial-gradient(ellipse at 50% 100%, rgba(214,179,139,.055), transparent 38rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .shell {
+      width: min(1120px, calc(100% - 48px));
+      min-height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+    .studio {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .23em;
+      text-transform: uppercase;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #c8b8a8;
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .status::before {
+      content: "";
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #c5a27e;
+      box-shadow: 0 0 12px rgba(197,162,126,.7);
+    }
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 88px 0 100px;
+      text-align: center;
+    }
+    .hero { width: min(760px, 100%); }
+    .mark {
+      width: 82px; height: 82px;
+      margin: 0 auto 34px;
+      border: 1px solid rgba(214,179,139,.38);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 47px;
+      font-weight: 400;
+      line-height: 1;
+      box-shadow: 0 0 55px rgba(185,139,131,.08), inset 0 0 25px rgba(214,179,139,.035);
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--rose);
+      font-size: 10px;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      color: #eee8e1;
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: clamp(43px, 8vw, 76px);
+      font-weight: 400;
+      letter-spacing: .105em;
+      line-height: 1.08;
+    }
+    .descriptor {
+      margin: 21px 0 0;
+      color: #c7b8aa;
+      font-size: 10px;
+      letter-spacing: .25em;
+      line-height: 1.9;
+      text-transform: uppercase;
+    }
+    .rule {
+      width: 190px;
+      height: 1px;
+      margin: 34px auto 30px;
+      background: linear-gradient(90deg, transparent, rgba(214,179,139,.75), transparent);
+      position: relative;
+    }
+    .rule::after {
+      content: "✧";
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -53%);
+      padding: 0 12px;
+      background: var(--bg);
+      color: var(--gold);
+      font-size: 13px;
+    }
+    .intro {
+      max-width: 570px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 350;
+      line-height: 1.9;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 39px;
+      padding: 12px 17px;
+      border: 1px solid rgba(214,179,139,.27);
+      border-radius: 2px;
+      color: #d7c2aa;
+      background: rgba(214,179,139,.045);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .pill span { color: var(--gold); font-size: 13px; }
+    .tagline {
+      margin: 48px 0 0;
+      color: #c8b9ab;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+      font-style: italic;
+      letter-spacing: .08em;
+    }
+    footer {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--soft);
+      font-size: 9px;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    footer strong {
+      color: #c7b8aa;
+      font-weight: 500;
+      letter-spacing: .2em;
+    }
+    @media (max-width: 600px) {
+      .shell { width: min(100% - 36px, 1120px); }
+      header { height: 76px; }
+      .studio { font-size: 8px; letter-spacing: .15em; }
+      .status { font-size: 8px; letter-spacing: .1em; }
+      main { padding: 72px 0 80px; }
+      .descriptor { font-size: 8px; letter-spacing: .16em; }
+      .intro { font-size: 14px; }
+      footer { flex-direction: column; justify-content: center; padding: 22px 0; text-align: center; line-height: 1.8; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="studio">An independent product by PIGOAT</div>
+      <div class="status">In development</div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="product-name">
+        <div class="mark" aria-hidden="true">π</div>
+        <p class="eyebrow">Introducing</p>
+        <h1 id="product-name">PI CHROMA</h1>
+        <p class="descriptor">Portrait Imaging <span aria-hidden="true">·</span> Digital Makeup</p>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="intro">
+          A creative workspace for portrait visualization, complexion exploration
+          and digital makeup. Thoughtfully engineered for precision, control and
+          a more considered beauty workflow.
+        </p>
+        <div class="pill"><span aria-hidden="true">✦</span> Currently in development</div>
+        <p class="tagline">Visualize · Enhance · Transform</p>
+      </section>
+    </main>
+
+    <footer>
+      <strong>PIGOAT SOFTWARE STUDIO</strong>
+      <span>© <span id="year">2026</span> PIGOAT. All rights reserved.</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
