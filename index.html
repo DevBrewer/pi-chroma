@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pi Chroma — The luxury portrait retouching studio for your desktop. On-device precision makeup, complexion refinement, and studio relighting."
+    />
+    <meta property="og:title" content="Pi Chroma — Atelier-Grade Portrait Retouching" />
+    <meta
+      property="og:description"
+      content="Where photography meets atelier precision. On-device beauty retouching for portrait photographers and beauty artists."
+    />
+    <meta property="og:type" content="website" />
+    <title>Pi Chroma — Atelier-Grade Portrait Retouching</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- =================== HEADER =================== -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <!-- Brand -->
+        <a href="#" class="brand" aria-label="Pi Chroma home">
+          <div class="brand-monogram" aria-hidden="true">PC</div>
+          <span class="brand-wordmark">PI CHROMA</span>
+        </a>
+
+        <!-- Nav -->
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href="#capabilities" class="nav-link">Capabilities</a>
+          <a href="#workflow" class="nav-link">Workflow</a>
+          <a href="#status" class="nav-link">Project Status</a>
+        </nav>
+
+        <!-- Status indicator -->
+        <div class="status-pill header-status">
+          <span class="status-dot"></span>
+          <span>In Development</span>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile nav drawer -->
+      <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#status" class="nav-link">Project Status</a>
+        <div class="status-pill" style="margin-top: 12px; display: inline-flex">
+          <span class="status-dot"></span>
+          <span>In Development</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =================== HERO =================== -->
+      <section id="hero" class="section-hero">
+        <div class="container hero-grid">
+          <!-- Left column -->
+          <div class="hero-left fade-in">
+            <div class="hero-badge">
+              <span class="status-dot"></span>
+              In Active Development &nbsp;·&nbsp; Unreleased
+            </div>
+
+            <h1 class="hero-heading">
+              An opinionated studio for<br />
+              <em>portrait retouching.</em>
+            </h1>
+
+            <p class="hero-subtitle">
+              <span id="brand">Pi Chroma </span>is being built from the ground up for tactile,
+              frame-accurate beauty work and studio relighting. Running entirely on your local
+              machine, with zero cloud dependency.
+            </p>
+
+            <div class="dev-notice-card">
+              <div class="dev-notice-header">
+                <span class="status-dot pulse"></span>
+                <span class="dev-notice-title">Status: In Active Development</span>
+              </div>
+              <p class="dev-notice-text">
+                This software is currently unreleased. We are focusing on getting the core tools
+                right—natural pore-preserving skin refinement, precision lash and liner geometry,
+                and sculpted 3D studio lighting. No hype, no false promises.
+              </p>
+            </div>
+
+            <p class="privacy-note">🔒 On-device processing. No cloud reliance.</p>
+          </div>
+
+          <!-- Right column: Before/After -->
+          <div class="hero-right fade-in fade-in-delay">
+            <div
+              class="comparison-viewport"
+              id="comparison"
+              role="img"
+              aria-label="Before and after portrait comparison"
+            >
+              <!-- Before image -->
+              <div class="comparison-side comparison-before">
+                <img src="assets/portrait-before.svg" alt="Original portrait" draggable="false" />
+                <div class="comparison-badge badge-original">ORIGINAL</div>
+              </div>
+
+              <!-- After image -->
+              <div class="comparison-side comparison-after">
+                <img
+                  src="assets/portrait-after.svg"
+                  alt="Atelier-grade retouched portrait"
+                  draggable="false"
+                />
+                <div class="comparison-badge badge-atelier">PREVIEW</div>
+              </div>
+
+              <!-- Divider -->
+              <div
+                class="comparison-divider"
+                id="comparison-divider"
+                role="slider"
+                aria-label="Before/after comparison slider"
+                aria-valuenow="50"
+                aria-valuemin="5"
+                aria-valuemax="95"
+                tabindex="0"
+              >
+                <div class="divider-line"></div>
+                <div class="divider-handle" aria-hidden="true">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9H12M6 9L4 7M6 9L4 11M12 9L14 7M12 9L14 11"
+                      stroke="#121318"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="comparison-hint">Drag to compare</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== CAPABILITIES =================== -->
+      <section id="capabilities" class="section-capabilities">
+        <div class="container">
+          <div class="section-intro fade-in">
+            <p class="section-eyebrow">STUDIO CAPABILITIES</p>
+            <h2 class="section-heading">
+              Four disciplines.<br />
+              One unified studio.
+            </h2>
+          </div>
+
+          <div class="capabilities-grid">
+            <article class="capability-card fade-in">
+              <div class="card-accent-line"></div>
+              <div class="card-body">
+                <div class="card-icon" aria-hidden="true">◈</div>
+                <h3 class="card-title">Precision Digital Beauty</h3>
+                <p class="card-desc">
+                  Angle-aware eyeliner, dimensional lashes, and colour-true lip shades rendered
+                  frame by frame with no manual masking.
+                </p>
+              </div>
+            </article>
+
+            <article class="capability-card fade-in">
+              <div class="card-accent-line"></div>
+              <div class="card-body">
+                <div class="card-icon" aria-hidden="true">✦</div>
+                <h3 class="card-title">Texture-True Complexion</h3>
+                <p class="card-desc">
+                  Natural pore-preserving skin refinement and seamless blush. Smooth without the
+                  plastic — real skin, elevated.
+                </p>
+              </div>
+            </article>
+
+            <article class="capability-card fade-in">
+              <div class="card-accent-line"></div>
+              <div class="card-body">
+                <div class="card-icon" aria-hidden="true">◉</div>
+                <h3 class="card-title">3D Studio Relighting</h3>
+                <p class="card-desc">
+                  Place virtual key lights, rim lights, and backdrops with painterly accuracy. Light
+                  the face as if you were in the studio.
+                </p>
+              </div>
+            </article>
+
+            <article class="capability-card fade-in">
+              <div class="card-accent-line"></div>
+              <div class="card-body">
+                <div class="card-icon" aria-hidden="true">⟳</div>
+                <h3 class="card-title">Private Instant Performance</h3>
+                <p class="card-desc">
+                  Everything processes on your device, in real time. No cloud. No upload wait. No
+                  subscription. Your portraits, your studio.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== WORKFLOW =================== -->
+      <section id="workflow" class="section-workflow">
+        <div class="container">
+          <div class="section-intro section-intro-centered fade-in">
+            <h2 class="section-heading">
+              Your entire retouching<br />
+              workflow, unified.
+            </h2>
+          </div>
+
+          <!-- Tab bar -->
+          <div class="tab-bar" role="tablist" aria-label="Workflow modules">
+            <button
+              class="tab-btn active"
+              role="tab"
+              id="tab-makeup"
+              aria-selected="true"
+              aria-controls="panel-makeup"
+              data-tab="makeup"
+            >
+              Makeup &amp; Lashes
+            </button>
+            <button
+              class="tab-btn"
+              role="tab"
+              id="tab-complexion"
+              aria-selected="false"
+              aria-controls="panel-complexion"
+              data-tab="complexion"
+            >
+              Complexion &amp; Glow
+            </button>
+            <button
+              class="tab-btn"
+              role="tab"
+              id="tab-lighting"
+              aria-selected="false"
+              aria-controls="panel-lighting"
+              data-tab="lighting"
+            >
+              Studio Relighting
+            </button>
+            <button
+              class="tab-btn"
+              role="tab"
+              id="tab-sculpt"
+              aria-selected="false"
+              aria-controls="panel-sculpt"
+              data-tab="sculpt"
+            >
+              Sculpt &amp; Optics
+            </button>
+          </div>
+
+          <!-- Tab panels -->
+          <div class="tab-panels">
+            <div
+              class="tab-panel active"
+              id="panel-makeup"
+              role="tabpanel"
+              aria-labelledby="tab-makeup"
+            >
+              <div class="studio-card fade-in">
+                <div class="studio-card-icon" aria-hidden="true">
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="38"
+                      stroke="#E2B49A"
+                      stroke-width="1"
+                      stroke-opacity="0.3"
+                    />
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="28"
+                      stroke="#E2B49A"
+                      stroke-width="1"
+                      stroke-opacity="0.2"
+                    />
+                    <!-- Lip shape -->
+                    <path
+                      d="M24 42 Q32 36 40 39 Q48 36 56 42 Q48 50 40 52 Q32 50 24 42Z"
+                      stroke="#E2B49A"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-opacity="0.8"
+                    />
+                    <!-- Lash strokes -->
+                    <line
+                      x1="28"
+                      y1="30"
+                      x2="26"
+                      y2="23"
+                      stroke="#E2B49A"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <line
+                      x1="34"
+                      y1="27"
+                      x2="33"
+                      y2="20"
+                      stroke="#E2B49A"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <line
+                      x1="40"
+                      y1="26"
+                      x2="40"
+                      y2="19"
+                      stroke="#E2B49A"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <line
+                      x1="46"
+                      y1="27"
+                      x2="47"
+                      y2="20"
+                      stroke="#E2B49A"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <line
+                      x1="52"
+                      y1="30"
+                      x2="54"
+                      y2="23"
+                      stroke="#E2B49A"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <!-- Eye arc -->
+                    <path
+                      d="M24 32 Q40 24 56 32"
+                      stroke="#E2B49A"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-opacity="0.6"
+                    />
+                  </svg>
+                </div>
+                <h3 class="studio-card-heading">Layer by layer. Shade by shade.</h3>
+                <ul class="studio-card-bullets">
+                  <li>Liner with real taper — from bold cat-eye to the most delicate flick</li>
+                  <li>Lash clusters with individually controlled length, curl, and density</li>
+                  <li>Blush, highlight, and contour applied in one pass, perfectly blended</li>
+                </ul>
+                <div class="feature-pills">
+                  <span class="pill">Lashes</span>
+                  <span class="pill">Liner</span>
+                  <span class="pill">Lip</span>
+                  <span class="pill">Brow</span>
+                  <span class="pill">Blush</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-panel"
+              id="panel-complexion"
+              role="tabpanel"
+              aria-labelledby="tab-complexion"
+              hidden
+            >
+              <div class="studio-card fade-in">
+                <div class="studio-card-icon" aria-hidden="true">
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="38"
+                      stroke="#E2B49A"
+                      stroke-width="1"
+                      stroke-opacity="0.3"
+                    />
+                    <!-- Skin oval -->
+                    <ellipse
+                      cx="40"
+                      cy="40"
+                      rx="20"
+                      ry="25"
+                      stroke="#E2B49A"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-opacity="0.6"
+                    />
+                    <!-- Texture dots -->
+                    <circle cx="34" cy="36" r="1" fill="#E2B49A" fill-opacity="0.4" />
+                    <circle cx="40" cy="33" r="1" fill="#E2B49A" fill-opacity="0.4" />
+                    <circle cx="46" cy="37" r="1" fill="#E2B49A" fill-opacity="0.4" />
+                    <circle cx="37" cy="42" r="1" fill="#E2B49A" fill-opacity="0.4" />
+                    <circle cx="43" cy="44" r="1" fill="#E2B49A" fill-opacity="0.4" />
+                    <!-- Glow radial -->
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="14"
+                      stroke="#EFC5AE"
+                      stroke-width="1"
+                      stroke-opacity="0.3"
+                      stroke-dasharray="2 4"
+                    />
+                  </svg>
+                </div>
+                <h3 class="studio-card-heading">Real skin. Perfectly refined.</h3>
+                <ul class="studio-card-bullets">
+                  <li>Pore-preserving smoothing that keeps natural texture intact</li>
+                  <li>Zone-aware foundation blending adapts to individual skin undertones</li>
+                  <li>Custom brush for targeted touch-ups exactly where you need them</li>
+                </ul>
+                <div class="feature-pills">
+                  <span class="pill">Foundation</span>
+                  <span class="pill">Smooth</span>
+                  <span class="pill">Brush</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-panel"
+              id="panel-lighting"
+              role="tabpanel"
+              aria-labelledby="tab-lighting"
+              hidden
+            >
+              <div class="studio-card fade-in">
+                <div class="studio-card-icon" aria-hidden="true">
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="38"
+                      stroke="#E2B49A"
+                      stroke-width="1"
+                      stroke-opacity="0.3"
+                    />
+                    <!-- Light rays from top right -->
+                    <line
+                      x1="58"
+                      y1="22"
+                      x2="40"
+                      y2="40"
+                      stroke="#EFC5AE"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-opacity="0.8"
+                    />
+                    <line
+                      x1="62"
+                      y1="30"
+                      x2="45"
+                      y2="40"
+                      stroke="#EFC5AE"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                      stroke-opacity="0.5"
+                    />
+                    <line
+                      x1="58"
+                      y1="40"
+                      x2="45"
+                      y2="45"
+                      stroke="#EFC5AE"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                      stroke-opacity="0.4"
+                    />
+                    <!-- Face oval -->
+                    <ellipse
+                      cx="38"
+                      cy="42"
+                      rx="16"
+                      ry="20"
+                      stroke="#E2B49A"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-opacity="0.5"
+                    />
+                    <!-- Rim light arc -->
+                    <path
+                      d="M22 32 Q18 42 24 54"
+                      stroke="#E2B49A"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      fill="none"
+                      stroke-opacity="0.6"
+                    />
+                    <!-- Light source dot -->
+                    <circle cx="58" cy="22" r="4" fill="#EFC5AE" fill-opacity="0.6" />
+                  </svg>
+                </div>
+                <h3 class="studio-card-heading">Light as a tool, not an afterthought.</h3>
+                <ul class="studio-card-bullets">
+                  <li>Key, Fill, Rim, and Accent light rigs with precise positional control</li>
+                  <li>Cinematic backdrops with real depth separation and atmosphere</li>
+                  <li>Shadow and specular rendering with true 3D facial geometry</li>
+                </ul>
+                <div class="feature-pills">
+                  <span class="pill">Key</span>
+                  <span class="pill">Fill</span>
+                  <span class="pill">Rim</span>
+                  <span class="pill">Backdrop</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-panel"
+              id="panel-sculpt"
+              role="tabpanel"
+              aria-labelledby="tab-sculpt"
+              hidden
+            >
+              <div class="studio-card fade-in">
+                <div class="studio-card-icon" aria-hidden="true">
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="38"
+                      stroke="#E2B49A"
+                      stroke-width="1"
+                      stroke-opacity="0.3"
+                    />
+                    <!-- Lens circle -->
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="20"
+                      stroke="#E2B49A"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-opacity="0.6"
+                    />
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="13"
+                      stroke="#E2B49A"
+                      stroke-width="1"
+                      fill="none"
+                      stroke-opacity="0.4"
+                    />
+                    <!-- Focus cross -->
+                    <line
+                      x1="40"
+                      y1="20"
+                      x2="40"
+                      y2="26"
+                      stroke="#EFC5AE"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <line
+                      x1="40"
+                      y1="54"
+                      x2="40"
+                      y2="60"
+                      stroke="#EFC5AE"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <line
+                      x1="20"
+                      y1="40"
+                      x2="26"
+                      y2="40"
+                      stroke="#EFC5AE"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <line
+                      x1="54"
+                      y1="40"
+                      x2="60"
+                      y2="40"
+                      stroke="#EFC5AE"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-opacity="0.7"
+                    />
+                    <!-- Center dot -->
+                    <circle cx="40" cy="40" r="2.5" fill="#E2B49A" fill-opacity="0.8" />
+                    <!-- Tone curve suggestion -->
+                    <path
+                      d="M26 54 Q32 48 40 40 Q48 32 54 26"
+                      stroke="#E2B49A"
+                      stroke-width="1"
+                      fill="none"
+                      stroke-opacity="0.4"
+                      stroke-dasharray="2 3"
+                    />
+                  </svg>
+                </div>
+                <h3 class="studio-card-heading">The finishing eye.</h3>
+                <ul class="studio-card-bullets">
+                  <li>Non-destructive facial sculpting with natural proportional awareness</li>
+                  <li>Film-inspired tone curves, grain, and halation for a true editorial look</li>
+                  <li>Focus enhancement that draws the eye exactly where you intend</li>
+                </ul>
+                <div class="feature-pills">
+                  <span class="pill">Sculpt</span>
+                  <span class="pill">Tone</span>
+                  <span class="pill">Noise</span>
+                  <span class="pill">Color</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== PROJECT STATUS =================== -->
+      <section id="status" class="section-cta">
+        <div class="container">
+          <div class="cta-inner fade-in">
+            <p class="section-eyebrow">DEVELOPMENT STATUS</p>
+            <h2 class="cta-heading">
+              Built with a focused,<br />
+              <em>opinionated design.</em>
+            </h2>
+            <p class="cta-description">
+              <span id="brand">Pi Chroma</span> is an opinionated portrait studio currently in
+              active development. We are taking the time to build and calibrate each tool properly
+              rather than rushing an unfinished product.
+            </p>
+
+            <div class="status-cards-grid">
+              <div class="status-item-card">
+                <span class="status-item-tag">Current State</span>
+                <h3 class="status-item-title">Active Development</h3>
+                <p class="status-item-desc">
+                  Core brush tools, lighting models, and skin refinement shaders are being
+                  iteratively tested and refined.
+                </p>
+              </div>
+              <div class="status-item-card">
+                <span class="status-item-tag">Philosophy</span>
+                <h3 class="status-item-title">Opinionated &amp; Tactile</h3>
+                <p class="status-item-desc">
+                  Built for creators who want precise control over texture, light, and symmetry
+                  without generic presets.
+                </p>
+              </div>
+              <div class="status-item-card">
+                <span class="status-item-tag">Privacy</span>
+                <h3 class="status-item-title">Local &amp; Offline</h3>
+                <p class="status-item-desc">
+                  Everything runs directly on your machine. No accounts, no telemetry, and no images
+                  leave your device.
+                </p>
+              </div>
+            </div>
+
+            <p class="privacy-note-cta">
+              Currently in development · Not yet available for download
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-left">© 2026 PIGOAT. All rights reserved.</p>
+        <nav class="footer-right" aria-label="Footer navigation">
+          <span class="footer-sep" aria-hidden="true">·</span>
+          <a href="#" class="footer-link">PIGOAT SOFTWARE STUDIO</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

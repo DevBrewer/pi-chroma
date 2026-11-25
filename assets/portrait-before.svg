@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A2520"/>
+      <stop offset="100%" stop-color="#1A1512"/>
+    </linearGradient>
+
+    <!-- Skin tone gradient -->
+    <radialGradient id="skin-grad" cx="50%" cy="45%" r="55%" fx="48%" fy="40%">
+      <stop offset="0%" stop-color="#C8A882"/>
+      <stop offset="60%" stop-color="#B89060"/>
+      <stop offset="100%" stop-color="#A07850"/>
+    </radialGradient>
+
+    <!-- Hair gradient -->
+    <linearGradient id="hair-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C1A0E"/>
+      <stop offset="100%" stop-color="#180E06"/>
+    </linearGradient>
+
+    <!-- Neck/shoulder gradient -->
+    <linearGradient id="neck-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B08858"/>
+      <stop offset="100%" stop-color="#8C6840"/>
+    </linearGradient>
+
+    <!-- Noise texture -->
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noiseOut"/>
+      <feColorMatrix type="saturate" values="0" in="noiseOut" result="grayNoise"/>
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="soft-light" result="blended"/>
+      <feComposite in="blended" in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Soft shadow under chin -->
+    <radialGradient id="chin-shadow" cx="50%" cy="100%" r="50%">
+      <stop offset="0%" stop-color="#1A1008" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1A1008" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Eye gradient -->
+    <radialGradient id="eye-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3A2518"/>
+      <stop offset="100%" stop-color="#1C0E06"/>
+    </radialGradient>
+
+    <!-- Lip gradient -->
+    <linearGradient id="lip-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8C5040"/>
+      <stop offset="100%" stop-color="#6C3828"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg-grad)"/>
+
+  <!-- Shoulder silhouette -->
+  <ellipse cx="200" cy="560" rx="200" ry="130" fill="#1E1410"/>
+  <path d="M0 420 Q80 390 140 410 Q170 420 200 440 Q230 420 260 410 Q320 390 400 420 L400 500 L0 500 Z" fill="#1E1410"/>
+
+  <!-- Neck -->
+  <rect x="170" y="360" width="60" height="90" rx="12" fill="url(#neck-grad)" filter="url(#noise)"/>
+
+  <!-- Face oval -->
+  <ellipse cx="200" cy="225" rx="128" ry="158" fill="url(#skin-grad)" filter="url(#noise)"/>
+
+  <!-- Chin shadow -->
+  <ellipse cx="200" cy="370" rx="80" ry="20" fill="url(#chin-shadow)"/>
+
+  <!-- Hair mass — top -->
+  <path d="M78 200 Q72 110 120 70 Q160 35 200 32 Q240 35 280 70 Q328 110 322 200
+            Q300 155 270 140 Q240 128 200 125 Q160 128 130 140 Q100 155 78 200Z"
+        fill="url(#hair-grad)"/>
+
+  <!-- Hair sides -->
+  <path d="M78 200 Q68 240 72 290 Q78 320 90 340 Q110 360 130 350 Q118 310 112 270 Q105 230 110 195 Q95 195 78 200Z"
+        fill="url(#hair-grad)"/>
+  <path d="M322 200 Q332 240 328 290 Q322 320 310 340 Q290 360 270 350 Q282 310 288 270 Q295 230 290 195 Q305 195 322 200Z"
+        fill="url(#hair-grad)"/>
+
+  <!-- Forehead highlight -->
+  <ellipse cx="200" cy="155" rx="60" ry="30" fill="#D0AE88" fill-opacity="0.18"/>
+
+  <!-- Left eyebrow -->
+  <path d="M148 178 Q163 170 182 173" stroke="#3A2010" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Right eyebrow -->
+  <path d="M218 173 Q237 170 252 178" stroke="#3A2010" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Left eye socket shadow -->
+  <ellipse cx="165" cy="200" rx="22" ry="12" fill="#9A7850" fill-opacity="0.25"/>
+  <!-- Right eye socket shadow -->
+  <ellipse cx="235" cy="200" rx="22" ry="12" fill="#9A7850" fill-opacity="0.25"/>
+
+  <!-- Left eye white -->
+  <ellipse cx="165" cy="200" rx="18" ry="10" fill="#EDE8E0"/>
+  <!-- Left iris -->
+  <ellipse cx="165" cy="200" rx="10" ry="10" fill="url(#eye-grad)"/>
+  <!-- Left pupil -->
+  <circle cx="165" cy="200" r="5" fill="#0A0604"/>
+  <!-- Left eye highlight -->
+  <circle cx="168" cy="197" r="2" fill="white" fill-opacity="0.7"/>
+  <!-- Left eyelid -->
+  <path d="M147 198 Q165 188 183 198" stroke="#2C1A0E" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Left lower lash line -->
+  <path d="M147 202 Q165 210 183 202" stroke="#3A2010" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Right eye white -->
+  <ellipse cx="235" cy="200" rx="18" ry="10" fill="#EDE8E0"/>
+  <!-- Right iris -->
+  <ellipse cx="235" cy="200" rx="10" ry="10" fill="url(#eye-grad)"/>
+  <!-- Right pupil -->
+  <circle cx="235" cy="200" r="5" fill="#0A0604"/>
+  <!-- Right eye highlight -->
+  <circle cx="238" cy="197" r="2" fill="white" fill-opacity="0.7"/>
+  <!-- Right eyelid -->
+  <path d="M217 198 Q235 188 253 198" stroke="#2C1A0E" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Right lower lash line -->
+  <path d="M217 202 Q235 210 253 202" stroke="#3A2010" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Nose -->
+  <path d="M200 215 Q195 240 188 255 Q196 258 200 257 Q204 258 212 255 Q205 240 200 215Z"
+        fill="#A07048" fill-opacity="0.5"/>
+  <!-- Nose tip highlight -->
+  <ellipse cx="200" cy="254" rx="8" ry="5" fill="#C8A070" fill-opacity="0.3"/>
+  <!-- Nostril left -->
+  <ellipse cx="191" cy="256" rx="5" ry="3.5" fill="#8A6038" fill-opacity="0.6"/>
+  <!-- Nostril right -->
+  <ellipse cx="209" cy="256" rx="5" ry="3.5" fill="#8A6038" fill-opacity="0.6"/>
+
+  <!-- Philtrum -->
+  <path d="M196 258 Q200 268 204 258" stroke="#A07048" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Upper lip -->
+  <path d="M176 282 Q188 274 200 278 Q212 274 224 282 Q212 290 200 288 Q188 290 176 282Z"
+        fill="url(#lip-grad)"/>
+  <!-- Lower lip -->
+  <path d="M176 282 Q188 300 200 302 Q212 300 224 282 Q212 290 200 288 Q188 290 176 282Z"
+        fill="#7C4535" fill-opacity="0.9"/>
+  <!-- Lip highlight -->
+  <ellipse cx="200" cy="292" rx="12" ry="4" fill="#B06050" fill-opacity="0.3"/>
+
+  <!-- Cheek blush left (subtle) -->
+  <ellipse cx="145" cy="230" rx="35" ry="22" fill="#C87060" fill-opacity="0.08"/>
+  <!-- Cheek blush right (subtle) -->
+  <ellipse cx="255" cy="230" rx="35" ry="22" fill="#C87060" fill-opacity="0.08"/>
+
+  <!-- Cheek highlight left -->
+  <ellipse cx="148" cy="218" rx="20" ry="14" fill="#D8B890" fill-opacity="0.12"/>
+  <!-- Cheek highlight right -->
+  <ellipse cx="252" cy="218" rx="20" ry="14" fill="#D8B890" fill-opacity="0.12"/>
+
+  <!-- Jaw definition -->
+  <path d="M90 270 Q88 320 130 360 Q165 385 200 390 Q235 385 270 360 Q312 320 310 270"
+        stroke="#8A6038" stroke-width="1" fill="none" opacity="0.15"/>
+
+  <!-- Natural face variation noise overlay -->
+  <ellipse cx="200" cy="225" rx="128" ry="158" fill="#C8A882" fill-opacity="0.04" filter="url(#noise)"/>
+
+  <!-- Collarbone area -->
+  <path d="M148 420 Q165 412 200 410 Q235 412 252 420" stroke="#A07848" stroke-width="1.5" fill="none" opacity="0.3"/>
+</svg>
